@@ -1,28 +1,100 @@
-<div class="bg-white p-6 rounded-3xl border-2 border-blue-50 shadow-lg relative overflow-hidden">
-    <div class="flex items-center gap-3 mb-4 text-blue-600">
-        <span class="text-2xl">🛡️</span>
-        <h3 class="font-bold text-lg leading-tight">Sécurisez votre transaction maintenant</h3>
-    </div>
-    
-    <p class="text-slate-500 text-sm mb-6">
-        Ne prenez aucun risque. Téléchargez le contrat complet incluant les <strong>8 clauses de protection</strong> et le certificat de cession officiel.
-    </p>
-    
-    <div class="flex items-center justify-between mb-6 bg-slate-50 p-4 rounded-2xl">
-        <span class="text-slate-600 font-medium">Prix du document :</span>
-        <span class="text-2xl font-black text-slate-900">4,90€</span>
-    </div>
-    
-    <a href="https://buy.stripe.com/00w3cv7uifeNfiX4n8enS00" class="block w-full text-center bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-[1.02] shadow-xl shadow-blue-100">
-        DÉBLOQUER MON CONTRAT
-    </a>
-    
-    <div class="mt-4 flex flex-wrap justify-center gap-4 opacity-60">
-        <div class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">
-            <span>🔒</span> PAIEMENT SÉCURISÉ
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperçu du Contrat | DocuVite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .blur-light { filter: blur(2px); user-select: none; }
+        .gradient-overlay { background: linear-gradient(to bottom, transparent, white); }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+    <nav class="bg-white border-b p-4 mb-6 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="font-black text-blue-700 italic text-xl">DOCUVITE</span>
+            <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-blue-600 uppercase italic">Retour</a>
         </div>
-        <div class="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">
-            <span>📄</span> PDF DISPONIBLE ICI
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-4 pb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            
+            <div class="bg-white p-8 border border-slate-200 shadow-inner rounded-lg relative overflow-hidden h-[650px] order-2 md:order-1">
+                <div class="text-[10px] text-slate-800 space-y-4">
+                    <h2 class="text-center font-black text-sm border-b-2 border-slate-900 pb-2 mb-6 uppercase italic tracking-tighter">Contrat de Vente Sous Seing Privé</h2>
+                    
+                    <p class="font-bold">ENTRE LES SOUSSIGNÉS :</p>
+                    <p><strong>Le Vendeur :</strong> <span id="out-vendeur" class="text-blue-600 font-bold uppercase underline">__________</span></p>
+                    <p><strong>L'Acheteur :</strong> <span id="out-acheteur" class="text-blue-600 font-bold uppercase underline">__________</span></p>
+                    
+                    <div class="mt-8 space-y-6">
+                        <div class="border-l-2 border-blue-100 pl-3">
+                            <p class="font-black text-slate-900 text-[11px] mb-1 italic">ARTICLE 1 : OBJET DU CONTRAT</p>
+                            <p class="text-slate-600 italic">Le présent contrat régit la cession entre les parties de l'objet désigné ci-après : ...</p>
+                        </div>
+
+                        <div class="border-l-2 border-blue-100 pl-3">
+                            <p class="font-black text-slate-900 text-[11px] mb-1 italic">ARTICLE 2 : PRIX ET MODALITÉS</p>
+                            <p class="text-slate-600 italic italic">La vente est consentie et acceptée moyennant le prix ferme de ...</p>
+                            <div class="blur-light text-slate-300 mt-1 italic">Le paiement sera effectué en totalité le jour de la signature par l'un des moyens suivants...</div>
+                        </div>
+
+                        <div class="border-l-2 border-blue-100 pl-3">
+                            <p class="font-black text-slate-900 text-[11px] mb-1 italic uppercase">Article 3 : État et Garanties</p>
+                            <p class="text-slate-600 italic">L'acheteur reconnaît avoir examiné l'objet et l'accepter dans l'état...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="absolute inset-x-0 bottom-0 h-48 gradient-overlay flex items-end justify-center pb-8">
+                    <div class="text-center bg-white/90 p-4 rounded-2xl border border-slate-100 shadow-xl backdrop-blur-sm">
+                        <p class="text-slate-900 font-black text-xs uppercase mb-1">Protection Complète</p>
+                        <p class="text-slate-400 text-[10px]">Débloquez les 8 articles après paiement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6 order-1 md:order-2">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-xl italic font-bold">🛡️</div>
+                        <h3 class="font-bold text-lg text-slate-800 italic uppercase">Sécuriser ma transaction</h3>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <input type="text" id="vendeur" oninput="maj()" placeholder="Nom du Vendeur" class="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 font-semibold transition-all">
+                        <input type="text" id="acheteur" oninput="maj()" placeholder="Nom de l'Acheteur" class="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500 font-semibold transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between p-4 bg-blue-50 rounded-2xl mb-8">
+                        <span class="text-slate-600 font-semibold">Total à régler :</span>
+                        <span class="text-2xl font-black text-blue-700 font-center tracking-tighter uppercase italic">4,90€</span>
+                    </div>
+
+                    <a href="https://buy.stripe.com/00w3cv7uifeNfiX4n8enS00" class="block w-full text-center bg-blue-600 text-white py-5 rounded-2xl font-black text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200 uppercase tracking-tighter italic">
+                        Activer ma protection
+                    </a>
+
+                    <div class="mt-6 flex justify-center gap-6 opacity-40">
+                        <div class="flex items-center gap-1 text-[9px] font-bold uppercase tracking-widest italic">🔒 Stripe Secure</div>
+                        <div class="flex items-center gap-1 text-[9px] font-bold uppercase tracking-widest italic">📄 Format PDF</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+
+    <script>
+        function maj() {
+            document.getElementById('out-vendeur').innerText = document.getElementById('vendeur').value || '__________';
+            document.getElementById('out-acheteur').innerText = document.getElementById('acheteur').value || '__________';
+        }
+    </script>
+</body>
+</html>
