@@ -27,11 +27,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition cursor-pointer" onclick="ouvrirQuittance()">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1h1v-4h3v4h1m-7-4h7" />
-                    </svg>
-                </div>
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-2xl">🏠</div>
                 <h3 class="text-xl font-bold">Quittance de Loyer</h3>
                 <p class="text-slate-500 mt-2 text-sm leading-relaxed">Modèle gratuit conforme à la Loi Alur. Idéal pour bailleurs particuliers.</p>
                 <div class="mt-6 text-blue-600 font-bold flex items-center text-sm">Générer gratuitement →</div>
@@ -39,127 +35,20 @@
 
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition relative overflow-hidden border-t-4 border-t-orange-500">
                 <div class="absolute top-4 right-4 bg-orange-100 text-orange-600 text-[10px] font-bold px-2 py-1 rounded">PAYANT</div>
-                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-6 text-2xl">✍️</div>
                 <h3 class="text-xl font-bold">Contrat de Vente Occasion</h3>
-                <p class="text-slate-500 mt-2 text-sm leading-relaxed">Protégez votre vente entre particuliers (véhicule, mobilier, etc.).</p>
-                <a href="<a href="preview.html" class="...">
-" class="mt-6 block text-center bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition">Acheter (5,90€)</a>
+                <p class="text-slate-500 mt-2 text-sm leading-relaxed mb-6">Protégez votre vente entre particuliers (véhicule, mobilier, etc.).</p>
+                <a href="preview.html" class="block text-center w-full py-4 bg-slate-900 text-white rounded-xl font-bold shadow-lg hover:bg-slate-800 transition">Voir le modèle (5,90€)</a>
             </div>
         </div>
     </div>
 
     <div id="generateur" class="hidden no-print max-w-4xl mx-auto py-8 px-4">
-        <button onclick="retourAccueil()" class="text-sm font-bold text-slate-400 mb-6 hover:text-blue-600">← RETOUR AU CHOIX</button>
-        
-        <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
-            <h2 class="text-2xl font-bold mb-8">Informations de la quittance</h2>
-            
-            <div class="mb-10">
-                <h3 class="text-xs font-black uppercase text-blue-600 tracking-widest mb-4">Le Bailleur (Propriétaire)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" id="proprio_nom" oninput="maj()" placeholder="Nom et Prénom" class="p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                    <input type="text" id="proprio_rue" oninput="maj()" placeholder="Adresse (N° et Rue)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                    <input type="text" id="proprio_cp" oninput="maj()" placeholder="Code Postal" class="p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm">
-                    <input type="text" id="proprio_ville" oninput="maj()" placeholder="Ville" class="p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm">
-                </div>
-            </div>
-
-            <div class="mb-10">
-                <h3 class="text-xs font-black uppercase text-blue-600 tracking-widest mb-4">Le Locataire</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" id="loc_nom" oninput="maj()" placeholder="Nom et Prénom" class="p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
-                    <input type="text" id="bien_adresse" oninput="maj()" placeholder="Adresse du logement loué" class="p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none md:col-span-2">
-                </div>
-            </div>
-
-            <div class="mb-10">
-                <h3 class="text-xs font-black uppercase text-blue-600 tracking-widest mb-4">Période & Montants</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <input type="text" id="periode" oninput="maj()" placeholder="Mois (ex: Mars 2026)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none">
-                    <input type="number" id="loyer" oninput="maj()" placeholder="Loyer HC (€)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none">
-                    <input type="number" id="charges" oninput="maj()" placeholder="Charges (€)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none">
-                </div>
-            </div>
-
-            <button onclick="window.print()" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-black shadow-lg shadow-blue-200 hover:bg-blue-700 transition">TÉLÉCHARGER LA QUITTANCE (PDF)</button>
         </div>
-    </div>
-
-    <div id="papier" class="max-w-[800px] mx-auto bg-white p-16 my-8 shadow-2xl border border-slate-100 text-slate-800">
-        <div class="flex justify-between items-start mb-12">
-            <div class="text-sm">
-                <p class="font-bold text-blue-700 uppercase mb-1">Bailleur</p>
-                <p id="out_p_nom" class="font-bold text-base">__________</p>
-                <p id="out_p_adresse">__________</p>
-                <p><span id="out_p_cp">____</span> <span id="out_p_ville">____</span></p>
-            </div>
-            <div class="text-right text-sm">
-                <p class="font-bold text-slate-400 uppercase mb-1">Locataire</p>
-                <p id="out_l_nom" class="font-bold text-base">__________</p>
-            </div>
-        </div>
-
-        <h2 class="text-2xl font-black text-center border-y-4 border-slate-900 py-4 mb-12">QUITTANCE DE LOYER</h2>
-
-        <p class="leading-loose mb-8">
-            Le bailleur soussigné certifie avoir reçu de la part du locataire <strong>M./Mme <span id="out_l_nom2">__________</span></strong>, 
-            la somme de <strong class="text-xl underline"><span id="out_total">0.00</span> €</strong>, au titre du loyer et des charges pour l'occupation 
-            du logement situé au <strong><span id="out_bien">__________</span></strong>, pour la période du <strong><span id="out_periode">__________</span></strong>.
-        </p>
-
-        <table class="w-full border-collapse mb-12">
-            <thead>
-                <tr class="bg-slate-50">
-                    <th class="border border-slate-300 p-3 text-left">Désignation</th>
-                    <th class="border border-slate-300 p-3 text-right">Montant</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td class="border border-slate-300 p-3 italic">Loyer hors charges</td><td id="out_loyer" class="border border-slate-300 p-3 text-right font-mono">0.00 €</td></tr>
-                <tr><td class="border border-slate-300 p-3 italic">Provisions pour charges</td><td id="out_charges" class="border border-slate-300 p-3 text-right font-mono">0.00 €</td></tr>
-                <tr class="bg-slate-100 font-bold"><td class="border border-slate-300 p-3 text-lg text-blue-800">TOTAL REÇU</td><td id="out_total_tab" class="border border-slate-300 p-3 text-right text-lg text-blue-800 font-mono text-xl">0.00 €</td></tr>
-            </tbody>
-        </table>
-
-        <p class="text-[10px] text-slate-400 text-justify italic mb-12 uppercase tracking-tighter leading-tight">
-            Cette quittance libère le locataire de son paiement pour la période indiquée. Elle ne peut en aucun cas servir de certificat d'hébergement sans facture d'énergie ou de téléphone. Le paiement est portable et non quérable.
-        </p>
-
-        <div class="flex justify-end mt-20">
-            <div class="text-center border-t border-slate-200 pt-4 w-64">
-                <p class="text-xs text-slate-400 italic mb-1">Fait à <span id="out_p_ville2">____</span>, le <span id="date_jour"></span></p>
-                <p class="font-bold">Signature du Bailleur</p>
-            </div>
-        </div>
-    </div>
 
     <script>
-        document.getElementById('date_jour').innerText = new Date().toLocaleDateString('fr-FR');
         function ouvrirQuittance() { document.getElementById('accueil').classList.add('hidden'); document.getElementById('generateur').classList.remove('hidden'); window.scrollTo(0,0); }
         function retourAccueil() { document.getElementById('generateur').classList.add('hidden'); document.getElementById('accueil').classList.remove('hidden'); }
-        function maj() {
-            const l = parseFloat(document.getElementById('loyer').value) || 0;
-            const c = parseFloat(document.getElementById('charges').value) || 0;
-            const total = l + c;
-            
-            document.getElementById('out_p_nom').innerText = document.getElementById('proprio_nom').value || '__________';
-            document.getElementById('out_p_adresse').innerText = document.getElementById('proprio_rue').value || '__________';
-            document.getElementById('out_p_cp').innerText = document.getElementById('proprio_cp').value || '____';
-            document.getElementById('out_p_ville').innerText = document.getElementById('proprio_ville').value || '____';
-            document.getElementById('out_p_ville2').innerText = document.getElementById('proprio_ville').value || '____';
-            document.getElementById('out_l_nom').innerText = document.getElementById('loc_nom').value || '__________';
-            document.getElementById('out_l_nom2').innerText = document.getElementById('loc_nom').value || '__________';
-            document.getElementById('out_bien').innerText = document.getElementById('bien_adresse').value || '__________';
-            document.getElementById('out_periode').innerText = document.getElementById('periode').value || '__________';
-            document.getElementById('out_loyer').innerText = l.toFixed(2) + ' €';
-            document.getElementById('out_charges').innerText = c.toFixed(2) + ' €';
-            document.getElementById('out_total').innerText = total.toFixed(2);
-            document.getElementById('out_total_tab').innerText = total.toFixed(2) + ' €';
-        }
     </script>
 </body>
 </html>
