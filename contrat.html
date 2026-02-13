@@ -5,95 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contrat de Vente Officiel | DocuVite</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; }
         @media print { 
             .no-print { display: none !important; } 
-            #document { 
-                border: none !important; 
-                box-shadow: none !important; 
-                margin: 0 !important; 
-                width: 100% !important; 
-                padding: 10mm !important; 
-            }
-            body { background-color: white; }
-            input, textarea { background: none !important; border-bottom: 1px solid #000 !important; }
+            #document { border: none !important; box-shadow: none !important; margin: 0 !important; width: 100% !important; padding: 5mm !important; }
+            body { background: white; }
         }
-        /* Force une seule page */
         #document { max-height: 297mm; overflow: hidden; }
     </style>
 </head>
-<body class="p-2 md:p-6">
+<body class="bg-slate-50 p-4">
 
-    <div class="no-print max-w-4xl mx-auto mb-4 bg-slate-900 text-white p-4 rounded-xl flex justify-between items-center shadow-xl">
-        <div class="flex items-center gap-2">
-            <span class="bg-blue-600 text-[10px] px-2 py-1 rounded font-black uppercase">Premium</span>
-            <p class="text-xs italic">Remplissez, puis imprimez.</p>
-        </div>
-        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-bold text-sm transition uppercase">Imprimer</button>
+    <div class="no-print max-w-3xl mx-auto mb-4 bg-slate-900 text-white p-4 rounded-xl flex justify-between items-center shadow-lg">
+        <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 italic">Document Premium</span>
+        <button onclick="window.print()" class="bg-blue-600 px-6 py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition">IMPRIMER LE CONTRAT</button>
     </div>
 
-    <div id="document" class="max-w-[800px] mx-auto bg-white p-8 shadow-sm border border-slate-200 text-slate-900 text-[11px] leading-tight">
+    <div id="document" class="max-w-[800px] mx-auto bg-white p-10 shadow-sm border border-slate-200 text-slate-900 text-[11px] leading-tight">
         
         <div class="text-center mb-6">
-            <h2 class="text-lg font-black uppercase border-b-2 border-slate-900 inline-block pb-1 italic">Contrat de Vente d'Occasion</h2>
-            <p class="mt-1 text-slate-500 italic text-[9px]">Modèle certifié DocuVite — Conforme Code Civil</p>
+            <h2 class="text-xl font-black uppercase border-b-2 border-black inline-block pb-1 italic">Contrat de Vente d'Occasion</h2>
+            <p class="text-[9px] text-slate-400 mt-1 italic">Conforme au Code Civil (Art. 1582 et suiv.)</p>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 mb-4">
-            <div class="p-3 bg-slate-50 rounded-lg border">
-                <h3 class="font-bold border-b mb-2 uppercase text-[9px] text-blue-700 italic">Le Vendeur</h3>
-                <input type="text" placeholder="Nom et Prénom" class="w-full bg-transparent border-b outline-none mb-1 font-bold">
-                <input type="text" placeholder="Adresse complète" class="w-full bg-transparent border-b outline-none">
+        <div class="grid grid-cols-2 gap-6 mb-6">
+            <div class="p-3 bg-slate-50 border rounded-xl">
+                <p class="font-bold text-[9px] uppercase text-blue-600 mb-1 italic">Le Vendeur</p>
+                <input type="text" placeholder="Nom Prénom" class="w-full border-b border-slate-200 outline-none font-bold bg-transparent mb-1 py-1">
+                <input type="text" placeholder="Adresse complète" class="w-full border-b border-slate-200 outline-none bg-transparent py-1 text-[10px]">
             </div>
-            <div class="p-3 bg-slate-50 rounded-lg border">
-                <h3 class="font-bold border-b mb-2 uppercase text-[9px] text-slate-400 italic">L'Acheteur</h3>
-                <input type="text" placeholder="Nom et Prénom" class="w-full bg-transparent border-b outline-none mb-1 font-bold">
-                <input type="text" placeholder="Adresse complète" class="w-full bg-transparent border-b outline-none">
+            <div class="p-3 bg-slate-50 border rounded-xl">
+                <p class="font-bold text-[9px] uppercase text-slate-400 mb-1 italic">L'Acheteur</p>
+                <input type="text" placeholder="Nom Prénom" class="w-full border-b border-slate-200 outline-none font-bold bg-transparent mb-1 py-1">
+                <input type="text" placeholder="Adresse complète" class="w-full border-b border-slate-200 outline-none bg-transparent py-1 text-[10px]">
             </div>
         </div>
 
-        <section class="mb-4">
-            <h4 class="font-bold underline uppercase mb-1 italic">Article 1 : Désignation du bien</h4>
-            <textarea placeholder="Description détaillée (Marque, Modèle, N° de série, Kilométrage actuel, État général...)" class="w-full p-2 bg-slate-50 border rounded outline-none h-16 resize-none"></textarea>
-        </section>
+        <div class="space-y-4">
+            <div><p class="font-bold underline text-[10px] uppercase">Article 1. Objet :</p><textarea placeholder="Marque, modèle, kilométrage, N° de série, état..." class="w-full border-b outline-none h-14 bg-transparent resize-none mt-1"></textarea></div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div><p class="font-bold underline text-[10px] uppercase">Article 2. Prix :</p><p class="mt-1 italic"><input type="text" placeholder="0.00" class="border-b w-20 text-center outline-none font-bold"> € payé par [ ] Espèces [ ] Virement</p></div>
+                <div><p class="font-bold underline text-[10px] uppercase">Article 3. Date & Heure :</p><p class="mt-1 italic">Le <input type="text" placeholder="JJ/MM/AA" class="border-b w-20 text-center outline-none"> à <input type="text" placeholder="HH:MM" class="border-b w-12 text-center outline-none font-bold"></p></div>
+            </div>
 
-        <div class="grid grid-cols-2 gap-4 mb-4">
-            <section>
-                <h4 class="font-bold underline uppercase mb-1 italic">Article 2 : Prix</h4>
-                <p>Montant : <input type="text" placeholder="0.00" class="border-b font-bold w-20 text-center"> €</p>
-                <p class="text-[9px] text-slate-500 mt-1 italic">Moyen : [ ] Espèces [ ] Virement [ ] Chèque</p>
-            </section>
-            <section>
-                <h4 class="font-bold underline uppercase mb-1 italic">Article 3 : Date et Heure</h4>
-                <p>Le : <input type="text" placeholder="JJ/MM/AAAA" class="border-b w-24 text-center"></p>
-                <p>À : <input type="text" placeholder="HH:MM" class="border-b w-16 text-center"> (Précis)</p>
-            </section>
+            <div><p class="font-bold underline text-[10px] uppercase">Article 4. État & Garanties :</p><p class="mt-1 italic text-slate-600 leading-snug text-justify text-[10px]">Le bien est vendu en l'état, sans garantie contractuelle après la remise des clés. L'acheteur reconnaît avoir essayé le bien. Le transfert de propriété et des risques est effectif immédiatement.</p></div>
         </div>
-
-        <section class="mb-6">
-            <h4 class="font-bold underline uppercase mb-1 italic">Article 4 : Conditions</h4>
-            <p class="text-justify text-slate-600 leading-tight">Le vendeur garantit que le bien est sa propriété exclusive et libre de tout gage. L'acheteur déclare accepter le bien dans l'état où il se trouve après examen. Le transfert de propriété et des risques s'effectue dès la signature du présent contrat.</p>
-        </section>
 
         <div class="mt-10 grid grid-cols-2 gap-12">
-            <div class="text-center pt-2 border-t border-slate-300">
-                <p class="font-bold uppercase text-[9px]">Signature du Vendeur</p>
-                <p class="text-[8px] italic text-slate-400">"Lu et approuvé"</p>
-                <div class="h-16"></div>
+            <div class="border-t border-slate-200 pt-3 text-center">
+                <p class="font-bold text-[9px] uppercase tracking-widest">Le Vendeur</p>
+                <div class="h-16 italic text-[9px] text-slate-300 flex items-end justify-center">"Lu et approuvé"</div>
             </div>
-            <div class="text-center pt-2 border-t border-slate-300">
-                <p class="font-bold uppercase text-[9px]">Signature de l'Acheteur</p>
-                <p class="text-[8px] italic text-slate-400">"Lu et approuvé"</p>
-                <div class="h-16"></div>
+            <div class="border-t border-slate-200 pt-3 text-center">
+                <p class="font-bold text-[9px] uppercase tracking-widest">L'Acheteur</p>
+                <div class="h-16 italic text-[9px] text-slate-300 flex items-end justify-center">"Lu et approuvé"</div>
             </div>
         </div>
 
-        <div class="mt-6 text-center border-t pt-2">
-            <p class="text-[8px] text-slate-400 italic italic">Fait en deux exemplaires originaux. Document généré par DocuVite.</p>
+        <div class="mt-10 pt-4 border-t-2 border-dotted border-slate-200 bg-slate-50 p-2 rounded">
+            <p class="text-[7.5px] text-slate-500 text-center uppercase tracking-tight leading-tight italic">
+                <strong>Limitation de responsabilité :</strong> Ce document est un modèle simplifié proposé par DocuVite. DocuVite n'est pas un cabinet d'avocats et ne fournit aucun conseil juridique. L'utilisation de ce modèle se fait sous l'entière responsabilité des parties. <strong>En aucun cas DocuVite ne pourra être tenu responsable d'un litige, d'une erreur ou d'une nullité du présent contrat.</strong> Fait en deux exemplaires originaux.
+            </p>
         </div>
     </div>
-
 </body>
 </html>
